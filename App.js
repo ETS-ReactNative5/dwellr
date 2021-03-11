@@ -6,11 +6,18 @@ import CustomButton from './Components/CustomButton';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>dwellr</Text>
 
-      <CustomButton> 
-        <Text> Login </Text>
-      </CustomButton>
+
+
+      <Text style={styles.title}>dwellr</Text>
+
+      
+      <CustomButton title='Login'/>
+    
+     
+      <CustomButton title='Register'/>
+
+      
 
 
       <StatusBar style="auto" />
@@ -25,4 +32,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  title: {
+    marginTop: 0,
+    width: '100%', 
+    textAlign: 'center',
+    fontSize: 40, 
+    fontWeight: '600',
+  },
+
+  
 });
