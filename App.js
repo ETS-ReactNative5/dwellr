@@ -4,13 +4,15 @@ import { ProgressViewIOSComponent, StyleSheet, Text, View } from 'react-native';
 
 import CustomButton from './Components/CustomButton';
 import Login from './Login';
-
+import Entypo from 'react-native-vector-icons/Entypo'
 
 export default function App() {
   return (
     <View style={styles.container}>
 
-      <Text style={styles.title}>dwellr</Text>
+      <Text style={styles.title}>dwellr
+      <Entypo name={"home"} size={15}/>
+      </Text>
 
       
       <CustomButton  title='Login'/>
