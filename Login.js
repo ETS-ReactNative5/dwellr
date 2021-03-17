@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ProgressViewIOSComponent, StyleSheet, Text, View } from 'react-native';
-import CustomButton from './Components/CustomButton';
+import CustomButton from './src/Components/Button/buttonIndex';
 
 export default function Login() {
   return (

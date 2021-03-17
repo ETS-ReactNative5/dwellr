@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ProgressViewIOSComponent, StyleSheet, Text, View } from 'react-native';
-
-import CustomButton from './Components/CustomButton';
+import HomeScreen from './src/screens/Home/homeIndex'
+import CustomButton from './src/Components/Button/buttonIndex';
 import Login from './Login';
 import Entypo from 'react-native-vector-icons/Entypo'
 
@@ -15,12 +15,13 @@ export default function App() {
       </Text>
 
       
-      <CustomButton  title='Login'/>
+      <CustomButton  onPress= {() => console.warn('Login Clicked')} title='Login'/>
 
-      <CustomButton title='Register'/>
+      <CustomButton onPress= {() => console.warn('Register Clicked')} title='Register'/>
 
 
       <StatusBar style="auto" />
+
     </View>
   );
 }
