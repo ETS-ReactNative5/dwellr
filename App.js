@@ -1,29 +1,43 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ProgressViewIOSComponent, StyleSheet, Text, View } from 'react-native';
+<<<<<<< Updated upstream
 import CustomButton from './src/Components/Button/buttonIndex';
 import Login from './Login';
 import Entypo from 'react-native-vector-icons/Entypo'
 import HomeScreen from './src/screens/Home/homeIndex';
+=======
+import HomeScreen from './src/screens/Home/homeIndex'
+import Entypo from 'react-native-vector-icons/Entypo'
+import CustomButton from './src/Components/Button/buttonIndex'
+>>>>>>> Stashed changes
 
 export default function App() {
   return (
-    <View style={styles.container}>
+     <View style={styles.container}>
 
-      <Text style={styles.title}>dwellr
-      <Entypo name={"home"} size={15}/>
-      </Text>
+       <Text style={styles.title}>dwellr
+       <Entypo name={"home"} size={15}/>
+       </Text>
 
       
-      <CustomButton  onPress= {() => console.warn('Login Clicked')} title='Login'/>
+       <CustomButton  onPress= {() => console.warn('Login Clicked')} title='Login'/>
 
-      <CustomButton onPress= {() => console.warn('Register Clicked')} title='Register'/>
+       <CustomButton onPress= {() => console.warn('Register Clicked')} title='Register'/>
 
+<<<<<<< Updated upstream
       <StatusBar style="auto" />
 
       {/* <HomeScreen/> */}
 
     </View>
+=======
+
+       <StatusBar style="auto" />
+       {/* <HomeScreen/> */}
+
+     </View>
+>>>>>>> Stashed changes
   );
 }
 
