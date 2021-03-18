@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ProgressViewIOSComponent, StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './src/screens/Home/homeIndex'
 import CustomButton from './src/Components/Button/buttonIndex';
 import Login from './Login';
 import Entypo from 'react-native-vector-icons/Entypo'
@@ -19,12 +18,12 @@ export default function App() {
 
       <CustomButton onPress= {() => console.warn('Register Clicked')} title='Register'/>
 
-
       <StatusBar style="auto" />
 
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
