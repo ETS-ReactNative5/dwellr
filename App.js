@@ -4,6 +4,7 @@ import { ProgressViewIOSComponent, StyleSheet, Text, View } from 'react-native';
 import CustomButton from './src/Components/Button/buttonIndex';
 import Login from './Login';
 import Entypo from 'react-native-vector-icons/Entypo'
+import HomeScreen from './src/screens/Home/homeIndex';
 
 export default function App() {
   return (
@@ -19,6 +20,8 @@ export default function App() {
       <CustomButton onPress= {() => console.warn('Register Clicked')} title='Register'/>
 
       <StatusBar style="auto" />
+
+      {/* <HomeScreen/> */}
 
     </View>
   );

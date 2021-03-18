@@ -1,12 +1,11 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 const styles = StyleSheet.create({
     image : {
         width: '100%',
         height: 500,
         resizeMode: 'cover',
-        alignItems: 'center',
-        justifyContent: 'center',
+
     },
 
     title: {
@@ -15,6 +14,22 @@ const styles = StyleSheet.create({
         color: 'white',
         width: '70%',
         marginLeft: 25
+    },
+    button: {
+        backgroundColor: '#fff',
+        width: 200,
+        marginTop: 50,
+        marginLeft: 25,
+        height: 40,
+        borderRadius: 5,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    buttonText: {
+        fontSize: 16,
+        fontWeight: 'bold'
+
     }
 });
 
