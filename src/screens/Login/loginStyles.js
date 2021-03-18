@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
-      paddingTop: 200,
     },
   
     title: {
@@ -15,6 +14,7 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontSize: 40, 
       fontWeight: '600',
+      zIndex: 100,
     },
   });
 

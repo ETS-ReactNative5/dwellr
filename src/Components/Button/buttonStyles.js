@@ -5,19 +5,13 @@ const styles= StyleSheet.create({
         width: '100%',
         padding: 10,
         alignItems: 'center',
-<<<<<<< Updated upstream
         justifyContent: 'center'
-=======
->>>>>>> Stashed changes
     },
 
     button: {
         backgroundColor: 'black', 
         height: 50,
-<<<<<<< Updated upstream
         width: 350,
-=======
->>>>>>> Stashed changes
         borderRadius: 40,
         // width: Dimensions.get('screen').width - 20,
         width: 350,
