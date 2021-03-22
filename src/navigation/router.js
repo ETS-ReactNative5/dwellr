@@ -1,9 +1,10 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native'
-import {createStackNavigator} from '@react-navigation/stack'
-import Payment from '../screens/Payment/paymentIndex'
-import HomeScreen from '../screens/Home/homeIndex'
-import HomeTabNavigator from './HomeTabNavigator'
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import Payment from '../screens/Payment/paymentIndex';
+import HomeScreen from '../screens/Home/homeIndex';
+import Calendar from '../screens/Calendar/calendarIndex';
+import HomeTabNavigator from './HomeTabNavigator';
 import { Header } from 'react-native/Libraries/NewAppScreen';
 
 const Stack = createStackNavigator();

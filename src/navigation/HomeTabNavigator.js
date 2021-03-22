@@ -2,9 +2,11 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Login from '../screens/Login/loginIndex';
 import HomeScreen from '../screens/Home/homeIndex';
-import Payment from '../screens/Payment/paymentIndex'
+import Payment from '../screens/Payment/paymentIndex';
+import Calendar from '../screens/Calendar/calendarIndex';
 import Feather from 'react-native-vector-icons/Feather';
 import Entypo from 'react-native-vector-icons/Entypo';
+import EvilIcons from 'react-native-vector-icons/EvilIcons';
 
 
 
@@ -66,7 +68,7 @@ const HomeTabNavigator = (props) => {
             }}
             /> */}
 
-            {/* <Tab.Screen 
+            { <Tab.Screen 
             name={"Calendar"} 
             component= {Calendar}
             options= {{
@@ -74,7 +76,7 @@ const HomeTabNavigator = (props) => {
                     <EvilIcons name="calendar" size={25} color={color}/>
                 )
             }}
-            /> */}
+            /> }
             {/* <Tab.Screen 
             name={"Forum"} 
             component= {Forum}
