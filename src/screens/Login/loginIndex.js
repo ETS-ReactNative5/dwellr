@@ -4,8 +4,12 @@ import {Text, View } from 'react-native';
 import CustomButton from '../../Components/Button/buttonIndex';
 import Entypo from 'react-native-vector-icons/Entypo'
 import styles from './loginStyles'
+import {useNavigation} from '@react-navigation/native'
+
 
 const Login = (props) => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
 
@@ -14,7 +18,7 @@ const Login = (props) => {
       </Text>
 
       
-      <CustomButton  onPress= {() => console.warn('Login Clicked')} title='Login'/>
+      <CustomButton  onPress= {() => navigation.navigate('Home')} title='Login'/>
 
       <CustomButton onPress= {() => console.warn('Register Clicked')} title='Register'/>
 

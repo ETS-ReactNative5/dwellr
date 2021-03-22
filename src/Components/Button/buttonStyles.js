@@ -9,7 +9,7 @@ const styles= StyleSheet.create({
     },
 
     button: {
-        backgroundColor: 'black', 
+        backgroundColor: '#47c9ba', 
         height: 50,
         width: 350,
         borderRadius: 40,
