@@ -8,8 +8,6 @@ import Feather from 'react-native-vector-icons/Feather';
 import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 
-
-
 const Tab = createBottomTabNavigator()
 
 const HomeTabNavigator = (props) => {
@@ -24,7 +22,7 @@ const HomeTabNavigator = (props) => {
             options= {{
                 tabBarIcon: ({color}) => (
                     <Feather name="user-plus" size={25} color={color}/>
-                )
+                ),
             }}
             />
 
@@ -34,7 +32,7 @@ const HomeTabNavigator = (props) => {
             options= {{
                 tabBarIcon: ({color}) => (
                     <Entypo name="home" size={25} color={color}/>
-                )
+                ),
             }}
             />
 
@@ -44,9 +42,19 @@ const HomeTabNavigator = (props) => {
             options= {{
                 tabBarIcon: ({color}) => (
                     <Entypo name="credit" size={25} color={color}/>
-                )
+                ),
             }}
             />
+
+            <Tab.Screen 
+            name={"Calendar"} 
+            component= {CalendarScreen}
+            options= {{
+                tabBarIcon: ({color}) => (
+                    <EvilIcons name="calendar" size={25} color={color}/>
+                )
+            }}
+            /> 
 
             {/* <Tab.Screen 
             name={"Messages"} 
@@ -68,15 +76,7 @@ const HomeTabNavigator = (props) => {
             }}
             /> */}
 
-            { <Tab.Screen 
-            name={"Calendar"} 
-            component= {CalendarScreen}
-            options= {{
-                tabBarIcon: ({color}) => (
-                    <EvilIcons name="calendar" size={25} color={color}/>
-                )
-            }}
-            /> }
+            
             {/* <Tab.Screen 
             name={"Forum"} 
             component= {Forum}

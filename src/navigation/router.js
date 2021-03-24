@@ -3,9 +3,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Payment from '../screens/Payment/paymentIndex';
 import HomeScreen from '../screens/Home/homeIndex';
-import Calendar from '../screens/Calendar/calendarIndex';
 import HomeTabNavigator from './HomeTabNavigator';
-import { Header } from 'react-native/Libraries/NewAppScreen';
+import { ProgressViewIOSComponent, StyleSheet, Text, View } from 'react-native';
+
 
 const Stack = createStackNavigator();
 
@@ -13,30 +13,32 @@ const Stack = createStackNavigator();
 const Router = (props) => {
     return(
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator style={styles.container}>
                 <Stack.Screen 
-                    name={"Login  fehrifuheruif erfheiufn jkjhnjkhnuheiru  "} 
+                    name={"Login "} 
                     component={HomeTabNavigator}
-                    screenOptions = {{headerShown: false}}
+                    options = {{headerShown: false}}
                 />
-                {/* <Stack.Screen 
+                <Stack.Screen 
                     name={"Payment"} 
                     component={Payment}
-                    options={{title: "Payment have to make this long so it shows up!!"}}
-                /> */}
-                {/* <Stack.Screen 
+                    options={{title: "Make a Payment" }}
+                /> 
+                <Stack.Screen 
                     name={"Homescreen"} 
-                    component={Payment}
-                    options={{title: "Payment"}}
-                /> */}
+                    component={HomeScreen}
+                    options={{title: "Home"}}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     );
 };
 
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+})
 
-  
-
-
-  export default Router;
+export default Router;
 

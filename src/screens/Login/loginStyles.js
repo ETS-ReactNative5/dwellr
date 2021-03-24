@@ -6,10 +6,10 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
+      paddingTop: 100
     },
   
     title: {
-      marginTop: 0,
       width: '100%', 
       textAlign: 'center',
       fontSize: 40, 

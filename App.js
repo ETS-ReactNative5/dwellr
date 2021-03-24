@@ -25,52 +25,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
   },
 })
 
-
-
-
-// export default function App() {
-//   return (
-//      <View style={styles.container}>
-
-//        <Text style={styles.title}>dwellr
-//        <Entypo name={"home"} size={15}/>
-//        </Text>
-
-      
-//        <CustomButton  onPress= {() => console.warn('Login Clicked')} title='Login'/>
-
-//        <CustomButton onPress= {() => console.warn('Register Clicked')} title='Register'/>
-
-//        <StatusBar style="auto" />
-//        {/* <HomeScreen/> */}
-//        {/* <Payment/> */}
-
-//      </View>
-
-//   );
-// }
-
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-
-//   title: {
-//     marginTop: 0,
-//     width: '100%', 
-//     textAlign: 'center',
-//     fontSize: 40, 
-//     fontWeight: '600',
-//   },
-
-  
-// })

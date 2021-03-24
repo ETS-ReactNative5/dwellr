@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     },
   
     title: {
-      marginTop: 0,
+      marginTop: 100,
       textAlign: 'center',
       fontSize: 35, 
       fontWeight: '600',

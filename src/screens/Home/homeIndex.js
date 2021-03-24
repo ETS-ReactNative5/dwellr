@@ -17,7 +17,7 @@ const HomeScreen = (props) => {
             <ImageBackground 
                 source={require('../../../assets/images/cat.jpg')} 
                 style={styles.image}>
-                <Text style= {styles.title}>Welcome Anuska</Text>
+                <Text style= {styles.title}>Welcome Sally</Text>
 
                 <CustomButton  onPress= {() => navigation.navigate('Payment')} title='Make Payment'/>
 {/* 

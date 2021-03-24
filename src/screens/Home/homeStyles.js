@@ -3,8 +3,9 @@ import { StyleSheet, Dimensions } from 'react-native';
 const styles = StyleSheet.create({
     image : {
         width: '100%',
-        height: 500,
+        height: 850,
         resizeMode: 'cover',
+        paddingTop: 100
 
     },
 
