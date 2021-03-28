@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-dwellr-dev-233455-authRole",
+      "UnauthRoleArn": "arn:aws:iam::341843753876:role/amplify-dwellr-dev-233455-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::341843753876:role/amplify-dwellr-dev-233455-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-dwellr-dev-233455-deployment",
+      "UnauthRoleName": "amplify-dwellr-dev-233455-unauthRole",
+      "StackName": "amplify-dwellr-dev-233455",
+      "StackId": "arn:aws:cloudformation:us-east-1:341843753876:stack/amplify-dwellr-dev-233455/c00135d0-8b88-11eb-8b1a-0e65dccd8cb7",
+      "AmplifyAppId": "d12lbolrmsi866"
+    },
+    "categories": {
+      "auth": {
+        "dwellr61f409bb": {}
+      }
+    }
+  }
+}

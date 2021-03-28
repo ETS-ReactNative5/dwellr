@@ -1,9 +1,14 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+
+//screens
 import Login from '../screens/Login/loginIndex';
 import HomeScreen from '../screens/Home/homeIndex';
 import Payment from '../screens/Payment/paymentIndex';
 import CalendarScreen from '../screens/Calendar/calendarIndex';
+import Profile from '../screens/Profile/profileIndex';
+
+//icons
 import Feather from 'react-native-vector-icons/Feather';
 import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
@@ -18,7 +23,7 @@ const HomeTabNavigator = (props) => {
             activeTintColor: '#47c9ba',
 
         }}>
-            <Tab.Screen 
+            {/* <Tab.Screen 
             name={"Login"} 
             component= {Login}
             options= {{
@@ -26,7 +31,7 @@ const HomeTabNavigator = (props) => {
                     <Feather name="user-plus" size={25} color={color}/>
                 )
             }}
-            />
+            /> */}
 
             <Tab.Screen 
             name={"Home"} 
@@ -74,6 +79,16 @@ const HomeTabNavigator = (props) => {
             options= {{
                 tabBarIcon: ({color}) => (
                     <EvilIcons name="calendar" size={25} color={color}/>
+                )
+            }}
+            /> }
+
+            { <Tab.Screen 
+            name={"Profile"} 
+            component= {Profile}
+            options= {{
+                tabBarIcon: ({color}) => (
+                    <Feather name="user" size={25} color={color}/>
                 )
             }}
             /> }
