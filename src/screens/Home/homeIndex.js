@@ -20,13 +20,6 @@ const HomeScreen = (props) => {
                 <Text style= {styles.title}>Welcome Sally</Text>
 
                 <CustomButton  onPress= {() => navigation.navigate('Payment')} title='Make Payment'/>
-{/* 
-                <Pressable 
-                    style={styles.button}
-                    onPress= {() => console.warn('Button Clicked')}
-                >
-                    <Text style={styles.buttonText}>Make Payment</Text>
-                </Pressable> */}
             </ImageBackground>
         </View>
     );

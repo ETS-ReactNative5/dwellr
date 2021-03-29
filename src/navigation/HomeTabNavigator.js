@@ -2,11 +2,14 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Login from '../screens/Login/loginIndex';
 import HomeScreen from '../screens/Home/homeIndex';
+import Messages from '../screens/Messages/messagesIndex';
 import Payment from '../screens/Payment/paymentIndex';
 import CalendarScreen from '../screens/Calendar/calendarIndex';
 import Feather from 'react-native-vector-icons/Feather';
 import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import { HeaderTitle } from '@react-navigation/stack';
+
 
 const Tab = createBottomTabNavigator()
 
@@ -51,20 +54,20 @@ const HomeTabNavigator = (props) => {
             component= {CalendarScreen}
             options= {{
                 tabBarIcon: ({color}) => (
-                    <EvilIcons name="calendar" size={25} color={color}/>
+                    <EvilIcons name="calendar" size={30} color={color}/>
                 )
             }}
             /> 
 
-            {/* <Tab.Screen 
+            <Tab.Screen 
             name={"Messages"} 
-            component= {Messaging}
+            component= {Messages}
             options= {{
                 tabBarIcon: ({color}) => (
-                    <Feather name="message-square" size={25} color={color}/>
+                    <Feather name="message-square" size={23} color={color}/>
                 )
             }}
-            /> */}
+            />
 
             {/* <Tab.Screen 
             name={"Profile"} 
