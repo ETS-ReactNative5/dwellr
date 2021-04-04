@@ -3,6 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Login from '../screens/Login/loginIndex';
 import HomeScreen from '../screens/Home/homeIndex';
 import Messages from '../screens/Messages/messagesIndex';
+import AddChat from '../screens/Messages/addchatIndex';
 import Payment from '../screens/Payment/paymentIndex';
 import CalendarScreen from '../screens/Calendar/calendarIndex';
 import Feather from 'react-native-vector-icons/Feather';
@@ -68,6 +69,16 @@ const HomeTabNavigator = (props) => {
                 )
             }}
             />
+
+            {/* <Tab.Screen 
+            name={"Add Chat"} 
+            component= {AddChat}
+            options= {{
+                tabBarIcon: ({color}) => (
+                    <Feather name="message-square" size={23} color={color}/>
+                )
+            }}
+            /> */}
 
             {/* <Tab.Screen 
             name={"Profile"} 
