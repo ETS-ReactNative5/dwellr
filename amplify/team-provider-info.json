@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "dwellr61f409bb": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d12lbolrmsi866",
+          "type": "manual"
+        }
       }
     }
   }

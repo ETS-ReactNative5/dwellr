@@ -1,6 +1,6 @@
 {
   "auth": {
-    "dwellr61f409bb": {
+    "dwellrreactnatived0e881a6": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -8,16 +8,15 @@
     }
   },
   "api": {
-    "dwellr": {
+    "payAPI": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
         "authConfig": {
           "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 180,
-              "description": ""
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authdwellrreactnatived0e881a6"
             }
           },
           "additionalAuthenticationProviders": []
@@ -25,11 +24,11 @@
       }
     }
   },
-  "hosting": {
-    "amplifyhosting": {
-      "service": "amplifyhosting",
+  "function": {
+    "makePayment": {
+      "build": true,
       "providerPlugin": "awscloudformation",
-      "type": "manual"
+      "service": "Lambda"
     }
   }
 }

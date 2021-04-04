@@ -1,0 +1,24 @@
+type Product @model {
+  id: ID!
+  date: String!
+  name: String!
+  description: String!
+  price: Int!
+}
+
+type Mutation {
+  createPayment(input: PaymentInput): PaymentResult
+    @function(name: "makePayment-${env}")
+}
+
+input PaymentInput {
+  amount: Float
+  total: Int
+  name: String
+  email: String
+}
+
+type PaymentResult {
+  statusCode: Int
+  body: String
+}
