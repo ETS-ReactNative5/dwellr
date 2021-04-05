@@ -1,0 +1,77 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-dwellr-dev-233455-authRole",
+      "UnauthRoleArn": "arn:aws:iam::341843753876:role/amplify-dwellr-dev-233455-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::341843753876:role/amplify-dwellr-dev-233455-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-dwellr-dev-233455-deployment",
+      "UnauthRoleName": "amplify-dwellr-dev-233455-unauthRole",
+      "StackName": "amplify-dwellr-dev-233455",
+      "StackId": "arn:aws:cloudformation:us-east-1:341843753876:stack/amplify-dwellr-dev-233455/c00135d0-8b88-11eb-8b1a-0e65dccd8cb7",
+      "AmplifyAppId": "d12lbolrmsi866"
+    }
+  },
+  "auth": {
+    "dwellr61f409bb": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "output": {
+        "UserPoolId": "us-east-1_jBEae6oV6",
+        "AppClientIDWeb": "7d0l6u356kia08tlf56loohmp2",
+        "AppClientID": "5gesvk02ioj246rb8dtmkbpeka",
+        "IdentityPoolId": "us-east-1:edda1e54-f85b-453e-a726-a49b89f04331",
+        "IdentityPoolName": "dwellr61f409bb_identitypool_61f409bb__dev",
+        "UserPoolName": "dwellr61f409bb_userpool_61f409bb"
+      },
+      "lastPushTimeStamp": "2021-04-04T18:24:35.221Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-dwellr-dev-233455-deployment/amplify-cfn-templates/auth/dwellr61f409bb-cloudformation-template.yml",
+        "logicalId": "authdwellr61f409bb"
+      }
+    }
+  },
+  "api": {
+    "dwellr": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 180,
+              "description": ""
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "jkfm6ojtqbdk5n6vnmhokharx4",
+        "GraphQLAPIEndpointOutput": "https://g7xwswtgz5cvlep44wgpt4jchm.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-zrjtxje4djhjrohksld4co3ucq"
+      },
+      "lastPushTimeStamp": "2021-04-04T18:24:35.229Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-dwellr-dev-233455-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apidwellr"
+      },
+      "lastPushDirHash": "tbettR8C8RCnJ8eb6aJFuv8MAEo="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-dwellr-dev-233455-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      },
+      "lastPushTimeStamp": "2021-04-04T18:24:35.229Z",
+      "output": {},
+      "lastPushDirHash": "/+VZ33seFFqAr6wbtptwbINUfSA="
+    }
+  }
+}

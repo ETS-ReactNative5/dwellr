@@ -19,15 +19,15 @@ function getHeaderTitle(route) {
 
     switch (routeName) {
         case 'Login':
-            return 'Login';
-        case 'Home':
-            return 'Home';
-        case 'Payment':
-            return 'Make Payment';
-        case 'Calendar':
-            return 'My Calendar';
-        case 'Messages':
-            return 'Chat Room';
+            return 'Login aljaldjfalsdfjalsdkfjasdfkladfa js;lkjlkjadf';
+        // case 'Home':
+        //     return 'Home aldjfal;dfja;lsdkjfalskdfjaldkfjasldkfj';
+        // case 'Payment':
+        //     return 'Make Payment';
+        // case 'Calendar':
+        //     return 'My Calendar';
+        // case 'Messages':
+        //     return 'Chat Room';
     }
 }
 
@@ -40,7 +40,7 @@ const Router = (props) => {
         <NavigationContainer>
             <Stack.Navigator style={styles.container}>
                 <Stack.Screen 
-                    name={"Login"} 
+                    name={"Login adjfaldkjfaldkjfaldfjalsdfjlskdjflsdjf adjfl;akjdfalj"} 
                     component={HomeTabNavigator}
                     // options = {{headerShown: true}}
                     options={({ route }) => ({

@@ -1,0 +1,8 @@
+{
+    "CreateAPIKey": 1,
+    "AppSyncApiName": "dwellr",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "S3DeploymentBucket": "amplify-dwellr-dev-233455-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/13a4013d8ec1552495508f1a463535d437e95444"
+}
