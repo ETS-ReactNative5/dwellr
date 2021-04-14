@@ -43,14 +43,14 @@ async function createCheckOutSession(amount, customer) {
         customer: customer,
         line_items: [
           {
-            name: "Buy your stuff here",
+            name: "Make Payment",
             amount: amount * 100,
-            currency: "eur",
+            currency: "usd",
             quantity: 1
           }
         ],
-        success_url: "https://dev.d1tzi3acpufgbn.amplifyapp.com/payment-success",
-        cancel_url: "https://dev.d1tzi3acpufgbn.amplifyapp.com/payment-failure",
+        success_url: "https://d3lwkxs11zm75x.cloudfront.net/payment-success",
+        cancel_url: "https://d3lwkxs11zm75x.cloudfront.net//payment-failure",
         locale: "nl"
       })
       .then(source => {

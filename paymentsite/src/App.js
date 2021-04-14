@@ -8,12 +8,20 @@ const stripePromise = loadStripe("pk_test_51IanjVEz8LPq8k7H0BLbS52lbQbLzG3XYTjCg
 
 // Showing null, because we will show the result in the app and not on the web
 function Success() {
-  return null;
+  return (
+    <div className="App">
+      <p>Payment works</p>
+    </div>
+  );
 }
 
 // Showing null, because we will show the result in the app and not on the web
 function Failure() {
-  return null;
+  return (
+    <div className="App">
+      <p>Payment failed</p>
+    </div>
+  );
 }
 
 // Showing null, because we will show the result in the app and not on the web

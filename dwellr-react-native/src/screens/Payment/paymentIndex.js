@@ -19,11 +19,11 @@ Analytics.disable();
 
 class Payment extends React.Component {
   state = {
-    amount: 15,
+    amount: 1000,
     quantity: "0",
     screen: "product",
-    initUrl: "https://dev.d1tzi3acpufgbn.amplifyapp.com/",
-    url: "https://dev.d1tzi3acpufgbn.amplifyapp.com/payment-init",
+    initUrl: "https://d3lwkxs11zm75x.cloudfront.net/",
+    url: "https://d3lwkxs11zm75x.cloudfront.net/payment-init",
     loading: true
   };
 
@@ -109,26 +109,27 @@ class Payment extends React.Component {
   showProduct() {
     return (
       <View style={styles.container}>
-        <Text style={styles.product}>Product A</Text>
+        <Text style={styles.product}>Make Payment</Text>
+        
         <Text style={styles.text}>
-          This is a great product which we sell to you
+          Your total is $ {this.state.amount} for this month.
         </Text>
-        <Text style={styles.text}>
-          The price for today is € {this.state.amount},- per item
-        </Text>
-        <Text style={styles.quantity}>How many items do you want to buy?</Text>
+        
         <View style={{ flex: 1 }}>
+          
           <TextInput
             style={styles.textInput}
             onChangeText={text => this.setState({ quantity: text })}
             value={this.state.quantity}
           />
+
           <TouchableOpacity
             style={styles.button}
             onPress={() => this.handleOrder()}
           >
-            <Text>Order now</Text>
+            <Text>Pay Now</Text>
           </TouchableOpacity>
+
         </View>
       </View>
     );
@@ -143,13 +144,13 @@ class Payment extends React.Component {
       case "success":
         return (
           <View style={styles.container}>
-            <Text style={{ fontSize: 25 }}>Payments Succeeded :)</Text>
+            <Text style={{ fontSize: 25 }}>Payment Succeeded :)</Text>
           </View>
         );
       case "failure":
         return (
           <View style={styles.container}>
-            <Text style={{ fontSize: 25 }}>Payments failed :(</Text>
+            <Text style={{ fontSize: 25 }}>Payment failed :(</Text>
           </View>
         );
       default:
