@@ -58,11 +58,11 @@ class Payment extends React.Component {
       this.createPaymentSession();
     }
 
-    if (webViewState.url === this.state.initUrl + "payment-success/") {
+    if (webViewState.url === this.state.initUrl + "payment-success") {
       this.setState({ screen: "success" });
     }
 
-    if (webViewState.url === this.state.initUrl + "payment-failure/") {
+    if (webViewState.url === this.state.initUrl + "payment-failure") {
       this.setState({ screen: "failure" });
     }
   }
