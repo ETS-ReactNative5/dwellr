@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
 
     return session;
   } catch (error) {
-    console.log("er is een fout opgetreden", error);
+    console.warn("not working", error);
   }
 };
 
@@ -39,7 +39,7 @@ async function createCheckOutSession(amount, customer) {
   return new Promise(function(resolve, reject) {
     stripe.checkout.sessions
       .create({
-        payment_method_types: ["card", "ideal"],
+        payment_method_types: ["card"],
         customer: customer,
         line_items: [
           {
@@ -50,8 +50,8 @@ async function createCheckOutSession(amount, customer) {
           }
         ],
         success_url: "https://d3lwkxs11zm75x.cloudfront.net/payment-success",
-        cancel_url: "https://d3lwkxs11zm75x.cloudfront.net//payment-failure",
-        locale: "nl"
+        cancel_url: "https://d3lwkxs11zm75x.cloudfront.net/payment-failure",
+        locale: "en"
       })
       .then(source => {
         // Success response

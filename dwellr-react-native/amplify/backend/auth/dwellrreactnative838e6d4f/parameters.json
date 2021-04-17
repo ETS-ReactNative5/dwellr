@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "dwellrreactnatived0e881a6_identitypool_d0e881a6",
+    "identityPoolName": "dwellrreactnative838e6d4f_identitypool_838e6d4f",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "dwellrd0e881a6",
-    "userPoolName": "dwellrreactnatived0e881a6_userpool_d0e881a6",
+    "resourceNameTruncated": "dwellr838e6d4f",
+    "userPoolName": "dwellrreactnative838e6d4f_userpool_838e6d4f",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "dwellrd0e881a6_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "dwellr838e6d4f_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "d0e881a6",
-    "resourceName": "dwellrreactnatived0e881a6",
+    "sharedId": "838e6d4f",
+    "resourceName": "dwellrreactnative838e6d4f",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -48,6 +48,5 @@
     "useDefault": "default",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
-    "usernameCaseSensitive": false,
     "dependsOn": []
 }

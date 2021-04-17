@@ -1,6 +1,6 @@
 {
   "auth": {
-    "dwellrreactnatived0e881a6": {
+    "dwellrreactnative838e6d4f": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -16,7 +16,7 @@
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
-              "userPoolId": "authdwellrreactnatived0e881a6"
+              "userPoolId": "authdwellrreactnative838e6d4f"
             }
           },
           "additionalAuthenticationProviders": []

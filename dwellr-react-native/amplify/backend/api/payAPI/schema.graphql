@@ -22,3 +22,4 @@ type PaymentResult {
   statusCode: Int
   body: String
 }
+

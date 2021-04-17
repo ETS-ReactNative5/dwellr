@@ -33,8 +33,8 @@ export function ChatCreateScreen() {
             }),
           ),
       )
-      .then(() => showMessage({ message: 'You have joined.' }))
-      .catch((err) => showMessage({ message: err.message, type: 'danger' }))
+      .then(() => showMessage(console.log("joined")))
+      .catch((err) => showMessage(console.log("error")))
       .finally(() => setLoading(false));
       
   }; 
