@@ -10,7 +10,7 @@ const stripePromise = loadStripe("pk_test_51IanjVEz8LPq8k7H0BLbS52lbQbLzG3XYTjCg
 function Success() {
   return (
     <div className="App">
-      <p>Payment works</p>
+      <p style="text-align: center;">Payment works</p>
     </div>
   );
 }

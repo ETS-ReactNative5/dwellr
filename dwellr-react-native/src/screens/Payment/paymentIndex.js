@@ -13,6 +13,8 @@ import Amplify, { API, graphqlOperation, Analytics } from "aws-amplify";
 import * as mutations from "../../graphql/mutations";
 import { withAuthenticator } from "aws-amplify-react-native";
 import config from "../../aws-exports";
+import CustomButton from '../../Components/Button/buttonIndex'
+import styles from './paymentStyles';
 
 Amplify.configure(config);
 Analytics.disable();
@@ -20,7 +22,6 @@ Analytics.disable();
 class Payment extends React.Component {
   state = {
     amount: 1000,
-    quantity: "0",
     screen: "product",
     initUrl: "https://d3lwkxs11zm75x.cloudfront.net/",
     url: "https://d3lwkxs11zm75x.cloudfront.net/payment-init",
@@ -30,9 +31,9 @@ class Payment extends React.Component {
   async createPaymentSession() {
     // hardcode input values, make these dynamic with the values from the logged in user
     const input = {
-      amount: this.state.amount * this.state.quantity,
-      name: "ramon",
-      email: "ramon@ramon.nl"
+      amount: this.state.amount,
+      name: "",
+      email: ""
     };
 
     await API.graphql(
@@ -74,14 +75,14 @@ class Payment extends React.Component {
     }
 
     return (
-      <View style={{ flex: 1, marginTop: 50 }}>
-        <View style={{ flex: 2 }}>
+      <View style={{ flex: 1}}>
+        <View style={{ flex: 1 }}>
           {loader && (
             <View style={[styles.loader, styles.horizontal]}>
               <ActivityIndicator
                 animating={true}
                 size="large"
-                color="#de62bf"
+                color="#47c9ba"
               />
             </View>
           )}
@@ -109,28 +110,20 @@ class Payment extends React.Component {
   showProduct() {
     return (
       <View style={styles.container}>
-        <Text style={styles.product}>Make Payment</Text>
         
+        <Text style={styles.text1}>
+          Your total is
+        </Text>
+        <Text style={styles.amount}>
+          ${this.state.amount}
+        </Text>
         <Text style={styles.text}>
-          Your total is $ {this.state.amount} for this month.
+          for this month.
         </Text>
         
-        <View style={{ flex: 1 }}>
-          
-          <TextInput
-            style={styles.textInput}
-            onChangeText={text => this.setState({ quantity: text })}
-            value={this.state.quantity}
-          />
+        <CustomButton  onPress= {() => this.handleOrder()} title='Pay Now'/>
+        
 
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => this.handleOrder()}
-          >
-            <Text>Pay Now</Text>
-          </TouchableOpacity>
-
-        </View>
       </View>
     );
   }
@@ -144,13 +137,13 @@ class Payment extends React.Component {
       case "success":
         return (
           <View style={styles.container}>
-            <Text style={{ fontSize: 25 }}>Payment Succeeded :)</Text>
+            <Text style={styles.text}>Payment Succeeded :)</Text>
           </View>
         );
       case "failure":
         return (
           <View style={styles.container}>
-            <Text style={{ fontSize: 25 }}>Payment failed :(</Text>
+            <Text style={styles.text}>Payment failed :(</Text>
           </View>
         );
       default:
@@ -161,48 +154,4 @@ class Payment extends React.Component {
 
 export default withAuthenticator(Payment);
 
-const styles = StyleSheet.create({
-  button: {
-    alignItems: "center",
-    marginTop: 20,
-    backgroundColor: "#DDDDDD",
-    padding: 10
-  },
-  textInput: {
-    width: 200,
-    borderColor: "gray",
-    borderWidth: 1,
-    padding: 15
-  },
-  quantity: {
-    marginTop: 50,
-    fontSize: 17,
-    marginBottom: 10
-  },
-  text: {
-    fontSize: 17,
-    marginBottom: 10
-  },
-  product: {
-    fontSize: 22,
-    marginBottom: 10
-  },
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
-    marginTop: 50,
-    margin: 10
-  },
-  loader: {
-    flex: 1,
-    justifyContent: "center"
-  },
-  horizontal: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    padding: 10
-  }
-});
 

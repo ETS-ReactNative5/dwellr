@@ -1,36 +1,42 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: 'white',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  
-    title: {
-      marginTop: 100,
-      textAlign: 'center',
-      fontSize: 35, 
-      fontWeight: '600',
-    },
-    subtitle: {
-        marginTop: 30,
-        textAlign: 'center',
-        fontSize: 20, 
-        fontWeight: '400',
-      },
+  text: {
+    marginTop: 20,
+    textAlign: 'center',
+    fontSize: 25, 
+    fontWeight: '400',
+    marginBottom: 50
+  },
+  text1: {
+    marginTop: 100,
+    textAlign: 'center',
+    fontSize: 25, 
+    fontWeight: '400',
+  },
+  amount: {
+    marginTop: 20,
+    textAlign: 'center',
+    fontSize: 25, 
+    fontWeight: '700',
+  },
 
-      subtitle2: {
-        marginTop: 50,
-        textAlign: 'center',
-        fontSize: 15, 
-        fontWeight: '400',
-        marginBottom: 10,
-      },
-  
-    
-  });  
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    alignItems: 'center',
+  },
+  loader: {
+    flex: 1,
+    justifyContent: "center"
+  },
+  horizontal: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    padding: 10
+  }
+});
+
 
 
 export default styles;
