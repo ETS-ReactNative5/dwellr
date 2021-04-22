@@ -8,10 +8,12 @@ import AddChat from '../screens/Messages/addchatIndex';
 import Payment from '../screens/Payment/paymentIndex';
 import CalendarScreen from '../screens/Calendar/calendarIndex';
 import Feather from 'react-native-vector-icons/Feather';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import { HeaderTitle } from '@react-navigation/stack';
 import WelcomeScreen from '../screens/Chat/welcome/welcome-screen'
+import Maintenance from '../screens/Maintenance/maintenanceIndex'
 
 const Tab = createBottomTabNavigator()
 
@@ -71,15 +73,15 @@ const HomeTabNavigator = (props) => {
             }}
             />
 
-            {/* <Tab.Screen 
-            name={"Messages"} 
-            component= {Messages}
+            <Tab.Screen 
+            name={"Maintenance"} 
+            component= {Maintenance}
             options= {{
                 tabBarIcon: ({color}) => (
-                    <Feather name="message-square" size={23} color={color}/>
+                    <FontAwesome name="wrench" size={23} color={color}/>
                 )
             }}
-            /> */}
+            />
 
             {/* <Tab.Screen 
             name={"Add Chat"} 
