@@ -19,6 +19,10 @@
         "makePayment": {
           "deploymentBucketName": "amplify-dwellrreactnative-dev-191151-deployment",
           "s3Key": "amplify-builds/makePayment-42337a592f325a304570-build.zip"
+        },
+        "mypythonfunction": {
+          "deploymentBucketName": "amplify-dwellrreactnative-dev-191151-deployment",
+          "s3Key": "amplify-builds/mypythonfunction-757477523259434d5935-build.zip"
         }
       }
     }

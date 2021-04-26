@@ -22,10 +22,29 @@
           "additionalAuthenticationProviders": []
         }
       }
+    },
+    "pythonapi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "mypythonfunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
     }
   },
   "function": {
     "makePayment": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "mypythonfunction": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
