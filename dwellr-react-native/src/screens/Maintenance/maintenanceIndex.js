@@ -1,40 +1,36 @@
-import React from 'react';
-import {View, Text, TextInput} from 'react-native';
-import CustomButton from '../../Components/Button/buttonIndex'
-import styles from './maintenanceStyles';
+import React, { useState } from "react";
+import { Button, StyleSheet, Text, View } from "react-native";
+import NativeForms from "native-forms";
 
+const Maintenance = () => {
+  const [hasForm, showForm] = useState(false);
+  const show = () => showForm(true);
+  const hide = () => showForm(false);
 
-class Maintenance extends React.Component {
-    constructor()
-    {
-        super(); 
-        this.state={
-            request:'',
-        }
-    }
+  return (
+    <View style={styles.container}>
+      <Text>NativeForms.com</Text>
 
-    submit()
-    {
-        console.warn(this.state)
-    }
+      <Button title="Show Form" onPress={show} color="#47c9ba" />
 
-    render() {
-        return (
-            <View>
-                <Text style={styles.title}> Maintenance Request Form </Text>
-                <TextInput
-                    placeholder="What seems to be the problem?"
-                    onChangeText={(text)=>{this.setState({request:text})}}
-                    multiline={true}
-                    style={{borderWidth:2, height: 200, borderColor:'#47c9ba', margin:40, fontSize:20, textAlign: 'left', }}
-                />
+      {hasForm && (
+        <NativeForms
+          form="https://my.nativeforms.com/o3YkhjRr1jZmglN4AlZH1Db"
+          onClose={hide}
+        />
+      )}
+    </View>
+  );
+};
 
-                <CustomButton  onPress= {() => this.submit()} title='Submit Requeset'/>
-
-                
-            </View>
-        )
-    }
-}
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
+  }
+});
 
 export default Maintenance;
+

@@ -11,6 +11,20 @@ const styles = StyleSheet.create({
         marginBottom: 20
       },
 
+      container: {
+        backgroundColor: 'white',
+        
+      },
+
+      input: {
+        borderWidth:2, 
+        height: 200,
+        borderColor:'#47c9ba', 
+        margin:40, 
+        fontSize:20, 
+        textAlign: 'left'
+      }
+
     });
 
     
