@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
 import NativeForms from "native-forms";
+import styles from './maintenanceStyles';
 
 const Maintenance = () => {
   const [hasForm, showForm] = useState(false);
@@ -9,7 +10,7 @@ const Maintenance = () => {
 
   return (
     <View style={styles.container}>
-      <Text>NativeForms.com</Text>
+      <Text style={styles.title}> Maintenance Request Form </Text>
 
       <Button title="Show Form" onPress={show} color="#47c9ba" />
 
@@ -22,15 +23,6 @@ const Maintenance = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
 
 export default Maintenance;
 

@@ -25,7 +25,9 @@ class Payment extends React.Component {
     screen: "product",
     initUrl: "https://d3lwkxs11zm75x.cloudfront.net/",
     url: "https://d3lwkxs11zm75x.cloudfront.net/payment-init",
-    loading: true
+    loading: true,
+    nextMonth: "June",
+    nextDay: 1,
   };
 
   async createPaymentSession() {
@@ -120,6 +122,8 @@ class Payment extends React.Component {
         <Text style={styles.text}>
           for this month.
         </Text>
+
+        <Text> Your next payment is due: {this.state.nextMonth}, {this.state.nextDay}</Text>
         
         <CustomButton  onPress= {() => this.handleOrder()} title='Pay Now'/>
         
