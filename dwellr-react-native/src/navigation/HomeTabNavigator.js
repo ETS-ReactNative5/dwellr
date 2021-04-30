@@ -43,7 +43,7 @@ const HomeTabNavigator = (props) => {
             }}
             />
 
-            <Tab.Screen 
+            {/* <Tab.Screen 
             name={"Payment"} 
             component= {Payment}
             options= {{
@@ -51,7 +51,7 @@ const HomeTabNavigator = (props) => {
                     <Entypo name="credit" size={25} color={color}/>
                 ),
             }}
-            />
+            /> */}
 
             <Tab.Screen 
             name={"Calendar"} 

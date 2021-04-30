@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   },
   body:{
     backgroundColor: "#778899",
-    height:500,
+    height:450,
     alignItems:'center',
   },
   item:{

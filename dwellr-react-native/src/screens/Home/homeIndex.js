@@ -1,14 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, ImageBackground, Pressable} from 'react-native';
+import {View, Text, ImageBackground, TouchableOpacity} from 'react-native';
 import styles from './homeStyles';
 import CustomButton from '../../Components/Button/buttonIndex';
-//copy line below for navigation
 import {useNavigation} from '@react-navigation/native'
 import API from '@aws-amplify/api';
 
 
 const HomeScreen = (props) => {
-    //copy line below for navigation
     const navigation = useNavigation();
 
     const [greeting, setGreeting] = useState(null);
@@ -23,15 +21,20 @@ const HomeScreen = (props) => {
     }, [])
 
     return (
-        <View>
-            {/* Accounnt/Profile */}
+        <View >
 
             <ImageBackground 
-                source={require('../../../assets/images/cat.jpg')} 
+                source={require('../../../assets/images/home.jpg')} 
                 style={styles.image}>
-                <Text style= {styles.title}>Welcome {greeting}</Text>
-
-                <CustomButton  onPress= {() => navigation.navigate('Payment')} title='Make Payment'/>
+                <Text style= {styles.title}>Welcome Home {greeting}</Text>
+                <Text> </Text> 
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress= {() => navigation.navigate('Payment')} title='Make Payment'
+                    >
+                    <Text style={styles.buttonText}>MAKE PAYMENT</Text>
+                </TouchableOpacity>
+                {/* <CustomButton  onPress= {() => navigation.navigate('Payment')} title='Make Payment'/> */}
             </ImageBackground>
         </View>
     );

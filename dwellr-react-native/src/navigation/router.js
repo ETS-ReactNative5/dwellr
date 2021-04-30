@@ -34,69 +34,38 @@ function getHeaderTitle(route) {
             return '                                     Chat Room                                    ';
         case 'Profile':
             return '                                        Profile                                          ';
+        case 'Maintenance':
+            return '                                  Maintenance                                          ';
     }
 }
 
 
 const Stack = createStackNavigator();
 
-//copied 
-// export const routes = {
-//     Welcome: {
-//       name: 'welcome',
-//       title: 'Welcome',
-//     },
-//     ChatList: {
-//       name: 'chat-list',
-//       title: 'Chat List',
-//     },
-//     ChatRoom: {
-//       name: 'chat-room',
-//       title: 'Chat Room',
-//     },
-//     ChatCreat: {
-//       name: 'chat-create',
-//       title: 'New Channel',
-//     },
-//   };
-
-
 const Router = (props) => {
-
-    //copied 
-    // const screenOptions = (title) => ({
-    //     title,
-    //     headerStyle: {
-    //       backgroundColor: "#47c9ba",
-    //     },
-    //     headerTintColor: 'white',
-    //     headerTitleStyle: {
-    //       fontWeight: '700',
-    //     },
-    //   });
 
     return(
         <NavigationContainer>
             <Stack.Navigator style={styles.container}>
                 <Stack.Screen 
-                    name={"Login adjfaldkjfaldkjfaldfjalsdfjlskdjflsdjf adjfl;akjdfalj"} 
+                    name={"Login"} 
                     component={HomeTabNavigator}
                     // options = {{headerShown: true}}
                     options={({ route }) => ({
                         headerTitle: getHeaderTitle(route),
-                        headerRight: ()=> (
-                            <View
-                            style={{
-                                flexDirection: "row",
-                                justifyContent: "space-between",
-                                width: 50
-                            }}
-                            >
-                                <TouchableOpacity>
-                                    <EvilIcons name="user" size={38} color="#47c9ba"/>
-                                </TouchableOpacity>
-                            </View>
-                        )
+                        // headerRight: ()=> (
+                        //     <View
+                        //     style={{
+                        //         flexDirection: "row",
+                        //         justifyContent: "space-between",
+                        //         width: 50
+                        //     }}
+                        //     >
+                        //         <TouchableOpacity>
+                        //             <EvilIcons name="user" size={38} color="#47c9ba"/>
+                        //         </TouchableOpacity>
+                        //     </View>
+                        // )
                     })}
                     
                 />
@@ -109,6 +78,12 @@ const Router = (props) => {
                         ),
                         headerStyle: {backgroundColor: "#47c9ba"}, 
                     }}
+                />
+
+                <Stack.Screen 
+                    name={"Payment"} 
+                    component= {Payment}
+                    options={{title: "                       Payment                          "}}
                 />
                 
                 <Stack.Screen 
@@ -157,35 +132,8 @@ const Router = (props) => {
 
                             </View>
                         ),
-                        // headerRight: () => (
-                        //     <View
-                        //         style={{
-                        //             flexDirection: "row",
-                        //             justifyContent: "space-between",
-                        //             width: 80,
-                        //             marginRight: 20,
-                        //         }}
-                        //         >
-                        //             <TouchableOpacity>
-                        //                 <Entypo name="home" size={25} color="white"/>
-                        //             </TouchableOpacity>
-                        //     </View>
-                        // )
-
                     }}
                 />
-                {/* <Stack.Screen 
-                    name={"Payment"} 
-                    component={Payment}
-                    options={{title: "Make a Payment" }}
-                /> 
-                <Stack.Screen 
-                    name={"Homescreen"} 
-                    component={HomeScreen}
-                    options={{title: "Home"}}
-                /> */}
-                {/*copied*/}
-                {/* <AppProvider> */}
                     <Stack.Screen
                         name={"Welcome"}
                         // options={screenOptions(routes.Welcome.title)}
@@ -209,7 +157,6 @@ const Router = (props) => {
                         options={{title: "                       Join Chat                           "}}
                         component={ChatCreateScreen}
                     />
-                {/* </AppProvider>  */}
             </Stack.Navigator>
         </NavigationContainer>
     );

@@ -1,13 +1,14 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Image, Text } from 'react-native';
-
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { colors } from '../../../../theme';
 import { images } from '../../../../assets';
 
 export function ChatListItem({ channel, onPress }) {
   return (
     <TouchableOpacity style={styles.card} onPress={onPress}>
-      <Image style={styles.cardIcon} source={images.message} />
+      {/* <Image style={styles.cardIcon} source={images.message} /> */}
+      <MaterialIcons name="message" size={35} color='#3eb0a2'/>
       <Text style={styles.cardText}>{channel.name}</Text>
     </TouchableOpacity>
   );
