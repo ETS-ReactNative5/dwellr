@@ -14,6 +14,22 @@ const CalendarScreen = (props) => {
     return (
         <View>
             <CalendarList
+            markedDates={{
+                '2021-05-01': {selected: true, marked: true, selectedColor: '#47c9ba'},
+                '2021-06-01': {selected: true, marked: true, selectedColor: '#47c9ba'},
+                '2021-07-01': {selected: true, marked: true, selectedColor: '#47c9ba'},
+                '2021-08-01': {selected: true, marked: true, selectedColor: '#47c9ba'},
+                '2021-09-01': {selected: true, marked: true, selectedColor: '#47c9ba'},
+                '2021-10-01': {selected: true, marked: true, selectedColor: '#47c9ba'},
+                '2021-11-01': {selected: true, marked: true, selectedColor: '#47c9ba'},
+                '2021-12-01': {selected: true, marked: true, selectedColor: '#47c9ba'},
+                '2022-01-01': {selected: true, marked: true, selectedColor: '#47c9ba'},
+                '2022-02-01': {selected: true, marked: true, selectedColor: '#47c9ba'},
+                '2022-03-01': {selected: true, marked: true, selectedColor: '#47c9ba'},
+                '2022-04-01': {selected: true, marked: true, selectedColor: '#47c9ba'},
+                '2021-05-18': {marked: true, dotColor: 'red', activeOpacity: 0},
+                '2021-06-27': {marked: true, dotColor: 'red', activeOpacity: 0},
+              }}
             // Callback which gets executed when visible months change in scroll view. Default = undefined
             onVisibleMonthsChange={(months) => {console.log('now these months are visible', months);}}
             // Max amount of months allowed to scroll to the past. Default = 50
