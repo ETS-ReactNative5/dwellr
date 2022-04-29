@@ -4,7 +4,7 @@ Senior design project
 Steps for running this code. 
 
 1. First, download the code
-2. Once downloading the code, navigate to the "dwellr-react-native" folder in your IDE (we used visual studio code )and run the following commands 
+2. Once the code has downloaded, navigate to the "dwellr-react-native" folder in your IDE (we used visual studio code )and run the following commands 
 from the terminal
 
       I. "npm install" <br />
